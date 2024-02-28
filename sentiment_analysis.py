@@ -22,7 +22,7 @@ def preprocess_text(text):
     clean_tokens = [token.text.lower().strip() for token in doc if not token.is_stop and not token.is_punct]
     return " ".join(clean_tokens)
 
-def analyze_sentiment(review_text):
+def analyse_sentiment(review_text):
     """
     Analyze the sentiment of a review, classify it, and return its classification and polarity score."""
     doc = nlp(review_text)
@@ -34,7 +34,7 @@ def analyze_sentiment(review_text):
 for i in range(5):
     sample_review = reviews_data.iloc[i]  # Select the first review
     clean_review = preprocess_text(sample_review)
-    sentiment, polarity = analyze_sentiment(clean_review)
+    sentiment, polarity = analyse_sentiment(clean_review)
     print(f"Review: {sample_review[:100]}...\nCleaned Review: {clean_review[:100]}...\nSentiment: {sentiment}, Polarity: {polarity:.2f}\n")
 
 # Comparing similarity of two reviews (example)
