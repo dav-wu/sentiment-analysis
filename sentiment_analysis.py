@@ -31,7 +31,7 @@ def analyse_sentiment(review_text):
     return sentiment, polarity
 
 # Example of preprocessing and sentiment analysis on sample reviews
-for i in range(5):
+for i in range(10):
     sample_review = reviews_data.iloc[i]  # Select the first review
     clean_review = preprocess_text(sample_review)
     sentiment, polarity = analyse_sentiment(clean_review)
